@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101713">
+  <title>Join the Drop — Battle Ground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="visual" aria-label="Battle Ground introduction">
+      <div class="visual-shade"></div>
+      <header class="brand"><span class="brand-mark">BG</span><span>BATTLE<br>GROUND</span><span class="season">SEASON 01</span></header>
+      <div class="visual-copy"><div class="eyebrow"><i></i> YOUR DROP STARTS HERE</div><h1>ONLY THE<br><span>READY</span><br>REMAIN.</h1><p>Gear up. Find your squad. Own the final circle.</p></div>
+      <div class="visual-bottom"><div class="coordinates">01°17' N&nbsp; 103°51' E</div><div class="status"><b></b> SERVERS ONLINE</div></div>
+      <div class="crosshair">+</div>
+    </section>
+    <section class="auth-panel">
+      <div class="mobile-brand"><span class="brand-mark">BG</span><span>BATTLE GROUND</span></div>
+      <div class="auth-wrap">
+        <div class="topline"><span>PLAYER ACCESS</span><span class="signal"><i></i><i></i><i></i><i></i></span></div>
+        <div class="tabs" role="tablist" aria-label="Account access">
+          <button class="tab active" id="register-tab" role="tab" aria-selected="true" aria-controls="auth-content" data-mode="register">CREATE ACCOUNT</button>
+          <button class="tab" id="login-tab" role="tab" aria-selected="false" aria-controls="auth-content" data-mode="login">LOG IN</button>
+        </div>
+        <div id="auth-content" role="tabpanel">
+          <div class="heading"><div class="step" id="step-label">01 / NEW RECRUIT</div><h2 id="form-title">Join the<br>battle.</h2><p id="form-subtitle">Create your account and claim your callsign.</p></div>
+          <form id="auth-form" novalidate>
+            <div class="field" id="username-field"><label for="username">CALLSIGN</label><input id="username" name="username" placeholder="e.g. GhostRider" autocomplete="username" minlength="3" maxlength="24"><span class="field-icon">✳</span></div>
+            <div class="field"><label for="email">GMAIL ADDRESS</label><input id="email" name="email" type="email" placeholder="you@gmail.com" autocomplete="email" required><span class="field-icon">↗</span></div>
+            <div class="verify-row" id="verify-row"><div class="field code-field"><label for="code">EMAIL CODE</label><input id="code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code"></div><button type="button" class="send-code" id="send-code">SEND CODE <span>↗</span></button></div>
+            <p class="hint" id="verify-hint">We’ll send a one-time code to your Gmail. Code expires in 10 minutes.</p>
+            <div class="field"><label for="password">PASSWORD</label><input id="password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required><button type="button" class="reveal" aria-label="Show password">SHOW</button></div>
+            <button class="submit" id="submit-button" type="submit"><span id="submit-label">CREATE MY ACCOUNT</span><b>↗</b></button>
+            <div class="message" id="message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="logged-in hidden" id="logged-in"><div class="success-mark">✓</div><div class="step">ACCESS GRANTED</div><h2>Welcome,<br><span id="welcome-name"></span>.</h2><p>Your account is ready. The battlefield is being prepared.</p><div class="coming"><b>01</b><span><strong>BATTLE GROUND</strong><small>COMING UP NEXT</small></span><i>LOCKED</i></div><button class="submit logout" id="logout">LOG OUT <b>↗</b></button></div>
+        <footer><span>© 2026 BATTLE GROUND</span><span>PLAY FAIR. STAY SHARP.</span></footer>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
